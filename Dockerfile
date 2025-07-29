@@ -13,6 +13,21 @@ COPY ./zext /zext/input
 COPY ./zext/zextractor.conf /zext/zextractor.conf
 RUN ./zextractor --outdir=input/data-resources --grf=./grf-source/data.grf,./grf-source/roverse.grf --filtersfile=input/filters.txt --verbose
 
+# Universal sprite file standardization
+RUN cd input/data-resources/data/sprite && \
+    for file in *.act *.spr; do \
+        if [[ -f "$file" ]]; then \
+            basename="${file%.*}"; \
+            if [[ ! "$basename" =~ ^_ ]] && [[ ! -f "_${basename}.act" ]] && [[ ! -f "_${basename}.spr" ]]; then \
+                if [[ "$file" == *.act ]]; then \
+                    ln -sf "$file" "_${basename}.act"; \
+                elif [[ "$file" == *.spr ]]; then \
+                    ln -sf "$file" "_${basename}.spr"; \
+                fi; \
+            fi; \
+        fi; \
+    done
+
 FROM zhade/zrenderer:latest
 
 WORKDIR /zren

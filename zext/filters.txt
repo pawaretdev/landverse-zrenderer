@@ -28,4 +28,3 @@ data\luafiles514\lua files\spreditinfo\smalllayerdir_female.*
 data\luafiles514\lua files\spreditinfo\smalllayerdir_male.*
 data\luafiles514\lua files\offsetitempos\offsetitempos_f.*
 data\luafiles514\lua files\offsetitempos\offsetitempos.*
-data\sprite\shadow.*
