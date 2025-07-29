@@ -1,11 +1,4 @@
-data\sprite\인간족\*
-data\sprite\도람족\*
-data\sprite\방패\*
-data\sprite\로브\*
-data\sprite\악세사리\*
-data\sprite\몬스터\*
-data\sprite\homun\*
-data\sprite\npc\*
+data\sprite\*
 data\palette\*
 data\imf\*
 data\luafiles514\lua files\datainfo\accessoryid.*
