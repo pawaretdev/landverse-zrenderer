@@ -3,7 +3,7 @@ services:
   zrenderer:
     build:
       context: .
-      dockerfile: Dockerfile.multi
+      dockerfile: Dockerfile
       args:
         DATA_GRF_URL: ${DATA_GRF_URL}
         ROVERSE_GRF_URL: ${ROVERSE_GRF_URL}
