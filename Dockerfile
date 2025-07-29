@@ -2,7 +2,7 @@ FROM zhade/zextractor AS build
 
 # Define build arguments for CDN URLs
 ARG DATA_GRF_URL
-ARG ROVERS_GRF_URL
+ARG ROVERSE_GRF_URL
 
 WORKDIR /zext
 
