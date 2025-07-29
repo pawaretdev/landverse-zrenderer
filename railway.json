@@ -5,7 +5,7 @@
     "dockerfilePath": "Dockerfile.multi"
   },
   "deploy": {
-    "startCommand": "/zren/start.sh",
+    "startCommand": "./zrenderer-server",
     "healthcheckPath": "/health",
     "healthcheckTimeout": 300,
     "restartPolicyType": "ON_FAILURE",
