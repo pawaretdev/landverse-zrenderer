@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  zrenderer:
+    build:
+      context: .
+      dockerfile: Dockerfile.multi
+      args:
+        DATA_GRF_URL: ${DATA_GRF_URL}
+        ROVERSE_GRF_URL: ${ROVERSE_GRF_URL}
+    volumes: 
+      - ./zren/output:/zren/output
+      - ./zren:/zren/container:Z
+    ports:
+      - "11011:11011"
