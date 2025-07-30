@@ -11,7 +11,7 @@ ADD ${ROVERSE_GRF_URL} ./grf-source/roverse.grf
 
 COPY ./zext /zext/input
 COPY ./zext/zextractor.conf /zext/zextractor.conf
-RUN ./zextractor --outdir=input/data-resources --grf=./grf-source/data.grf,./grf-source/roverse.grf --filtersfile=input/filters.txt --verbose
+RUN ./zextractor --outdir=input/data-resources --grf=./grf-source/data.grf,./grf-source/roverse.grf --filtersfile=input/filters.txt --verbose --loglevel=trace,info
 
 # Universal sprite file standardization
 RUN cd input/data-resources/data/sprite && \
